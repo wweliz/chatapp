@@ -45,7 +45,7 @@
     <div class="message-row">
 			<div class="msg-username"> <%= user %> 
 			</div><div class="msg-display"> <%= message %> 
-			</div><div class="msg-time"> <%= moment().format('dddd h:mm a') %> </div>
+			</div><div class="msg-time"> <%= moment((parseInt(time))).format('dddd h:mm a') %> </div>
 		</div>
   </script>
 

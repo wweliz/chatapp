@@ -19,8 +19,32 @@ $.getJSON('http://tiny-pizza-server.herokuapp.com/collections/chat-messages').do
   renderMessage(data);
 });
 
-// Send Your Messages
-$('.send-msg').click(function(){
-	$.post('http://tiny-pizza-server.herokuapp.com/collections/chat-messages');
+// Message data should be sent to the server in the following format:
+// {
+// 	user:"", 
+// 	message:"", 
+// 	time: epoch, 
+// 	meta:"", 
+// 	appID: static tag for identification
+// }
 
-});
+// // Send Your Messages
+// $('.send-msg').click(function(){
+// 	$.post('http://tiny-pizza-server.herokuapp.com/collections/chat-messages', {user:"", 
+// message:"", time: epoch, meta:"", appID: static tag for identification
+// }).done(function(mymsg){
+//   $('.messages').prepend(mymsg);
+// });
+
+
+// function Post (newMessage, username) {
+// var x = new Date();
+// $.post('http://tiny-pizza-server.herokuapp.com/collections/chat-messages', {
+// 	user: username, 
+// 	message: newMessage, 
+// 	time: x.toString(), 
+// 	meta: "", 
+// 	appID: "drewbot"})
+// }).done(function(mymsg){
+//   $('.messages').prepend(mymsg);
+// });
