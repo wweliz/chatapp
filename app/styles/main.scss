@@ -28,7 +28,7 @@ body {
 	}
 }
 .messages {
-	max-height: 750px;
+	max-height: 600px;
 	max-width: 650px;
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -73,6 +73,13 @@ body {
 	padding: 10px;
 	background-color: $blue;
 	vertical-align: top;
+
+	& .enter-username {
+		width: 100px;
+		height: 14px;
+		padding: 4px;
+		background-color: $ltgray;
+	}
 
 	& .type-msg-box {
 		width: 540px;
