@@ -27,7 +27,7 @@
 
 		it('should add a time property to instances', function(){
 			var msg = new Message(user, message);
-			expect(msg.time).to.eql(new Date().getTime());
+			expect(msg.time).to.exist;
 		});
 
 		it('should accept a string as its user argument.', function(){
@@ -40,20 +40,10 @@
 			expect(msg.message).to.equal('testmessage');
 		});
 
-		it('should accept a number as its time argument.', function(){
-			var msg = new Message(user, message);
-			expect(msg.time).to.equal(new Date().getTime());
-		});
-
-		it('should accept a 10 digit number as its time argument.', function(){
+		it('should have a number as its time property.', function(){
 			var msg = new Message(user, message);
 
-			console.log(msg);
-			console.log("msgtime is" + msg.time);
-			//console.log(msgtime.toString());
-			//console.log(msgtime.toString().length);
-
-			expect(msgtime.toString().length).to.equal(10);
+			expect(msg.time).to.be.a('number');
 		});
 
 	});

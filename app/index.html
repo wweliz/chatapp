@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>junkjunk</title>
+	<title>Quatsch!</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -45,7 +45,7 @@
     <div class="message-row">
 			<div class="msg-username"> <%= user %> 
 			</div><div class="msg-display"> <%= message %> 
-			</div><div class="msg-time"> <%= moment((parseInt(time))).format('dddd h:mm a') %> </div>
+			</div><div class="msg-time"> <%= time ? moment((parseInt(time))).format('dddd h:mm a') : 'unknown' %> </div>
 		</div>
   </script>
 
